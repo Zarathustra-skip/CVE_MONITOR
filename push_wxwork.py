@@ -3,7 +3,7 @@
 import requests
 import json
 
-wxwork_api = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=9683fe17-6159-4063-85dd-5a79ad5cc35f"
+wxwork_api = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=968xxxxxd5cc35f"
 
 
 def github_push(ps="这是一条备注", name="None",time="None", url="None", des='None'):
