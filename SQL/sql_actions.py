@@ -38,7 +38,7 @@ def analysis_init():
 
 
 def conn_db():
-    conn = sqlite3.connect('.\Datebases\monitor.db')
+    conn = sqlite3.connect('./Datebases/monitor.db')
     cursor = conn.cursor()
     return conn, cursor
 
