@@ -7,7 +7,7 @@ from SQL import sql_actions
 import base64
 import time
 
-github_token = "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"
+github_token = "ghp_rYa0GMuyx"
 
 github_headers = {
     "Authorization": github_token,
@@ -26,7 +26,7 @@ def cve_monitor():
             req = reqs.json()
             total_count = req['total_count']
             print("cve_count:", total_count)
-            with open('.\SQL\Datebases\count.txt', 'r') as f:
+            with open('./SQL/Datebases/count.txt', 'r') as f:
                 old_count = f.readlines()
                 if len(old_count) == 1:
                     old_count = old_count[0]
@@ -47,7 +47,7 @@ def cve_monitor():
                 push_wxwork.github_push(ps, git_name, git_uptime, git_url, git_description)
                 time.sleep(60*10)
             else:
-                with open('.\SQL\Datebases\count.txt', 'w') as f:
+                with open('./SQL/Datebases/count.txt', 'w') as f:
                     f.write(str(total_count))
                 print("old:", old_count)
                 print("new:", total_count)
